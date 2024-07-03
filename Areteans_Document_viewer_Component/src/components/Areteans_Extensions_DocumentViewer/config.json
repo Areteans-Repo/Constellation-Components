@@ -1,0 +1,54 @@
+{
+  "name": "Areteans_Extensions_DocumentViewer",
+  "label": "Document Viewer",
+  "description": "View documents with download, maximize and minimize option",
+  "organization": "Areteans",
+  "version": "1.0.0",
+  "library": "Extensions",
+  "allowedApplications": [],
+  "componentKey": "Areteans_Extensions_DocumentViewer",
+  "type": "Widget",
+  "subtype": "CASE",
+  "icon": "OneColumnPage.svg",
+  "properties": [
+    {
+      "name": "header",
+      "label": "Header value",
+      "format": "TEXT"
+    },
+    {
+      "name": "width",
+      "label": "Width (px)",
+      "format": "NUMBER"
+    },
+    {
+      "name": "height",
+      "label": "Height (px)",
+      "format": "NUMBER"
+    },
+    {
+      "name": "useAttachmentEndpoint",
+      "label": "Use the attachment endpoint",
+      "format": "BOOLEAN"
+    },
+    {
+      "name": "categories",
+      "label": "Categories (comma-separated)",
+      "format": "TEXT",
+      "visibility": "($this.useAttachmentEndpoint = true)"
+    },
+    {
+      "name": "docLinkList",
+      "label": "Document Links (comma-separated)",
+      "format": "TEXT"
+    }
+  ],
+  "defaultConfig": {
+    "header": "@L Document Viewer",
+    "widht": "@L $this.widht",
+    "height": "@L $this.height",
+    "useAttachmentEndpoint": "@L $this.useAttachmentEndpoint",
+    "categories": "@L $this.categories",
+    "docLinkList": "@l $this.docLinkList"
+  }
+}
